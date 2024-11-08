@@ -27,12 +27,12 @@
       "red": "#DC322F"
     },
     "dark": {
-      "background": "#002B36",
-      "foreground": "#93A1A1",
-      "yellow": "#B58900",
-      "green": "#859900",
-      "gray": "#6C71C4",
-      "blue": "#268BD2",
+      "background": "#001100",
+      "foreground": "#00BB00",
+      "yellow": "#00BB00",
+      "green": "#00BB00",
+      "gray": "#007700",
+      "blue": "#009900",
       "red": "#DC322F"
     }
   }

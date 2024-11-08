@@ -158,5 +158,47 @@
       "blue": "#06B6EF",
       "red": "#EF6155"
     }
+  },
+  "Greenscreen":
+  {
+    "light": {
+      "background": "#FDF6E3",
+      "foreground": "#586E75",
+      "yellow": "#B58900",
+      "green": "#859900",
+      "gray": "#6C71C4",
+      "blue": "#268BD2",
+      "red": "#DC322F"
+    },
+    "dark": {
+      "background": "#001100",
+      "foreground": "#00BB00",
+      "yellow": "#00BB00",
+      "green": "#00BB00",
+      "gray": "#007700",
+      "blue": "#009900",
+      "red": "#DC322F"
+    }
+  },
+  "Icy":
+  {
+    "light": {
+      "background": "#FDF6E3",
+      "foreground": "#586E75",
+      "yellow": "#B58900",
+      "green": "#859900",
+      "gray": "#6C71C4",
+      "blue": "#268BD2",
+      "red": "#DC322F"
+    },
+    "dark": {
+      "background": "#222222",
+      "foreground": "#BDBDBD",
+      "yellow": "#80DEEA",
+      "green": "#80DEEA",
+      "gray": "#0097A7",
+      "blue": "#009900",
+      "red": "#DC322F"
+    }
   }
 }
