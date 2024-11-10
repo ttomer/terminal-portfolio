@@ -43,6 +43,11 @@ export const resume = async (args: string[]): Promise<string> => {
   return 'Opening resume...';
 };
 
+export const portfolio = async (args: string[]): Promise<string> => {
+  window.open(`${config.portfolio}`);
+  return 'Opening resume...';
+};
+
 // // Donate
 // export const donate = async (args: string[]): Promise<string> => {
 //   return `thank you for your interest. 
