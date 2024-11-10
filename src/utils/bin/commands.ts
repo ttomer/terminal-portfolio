@@ -34,6 +34,7 @@ export const about = async (args: string[]): Promise<string> => {
 Welcome to my website!
 More about me:
 'summary' - short summary.
+'portfolio' - my portfolio.
 'resume' - my latest resume.
 'readme' - my github readme.`;
 };
