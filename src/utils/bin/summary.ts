@@ -1,7 +1,7 @@
 import config from '../../../config.json';
 
 const summary = async (args: string[]): Promise<string> => {
-  if (config.ascii === 'cveinnt') {
+  if (config.ascii === 'tomer') {
     return `                                                  
              @@@@@@@@@@@@@                   summary: summary display
         @@@@               @@@@             -----------

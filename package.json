@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "license": "MIT",
   "author": {
-    "name": "Vincent Wu",
-    "url": "https://cveinnt.com",
-    "email": "contact@wensenwu.com"
+    "name": "",
+    "url": "",
+    "email": ""
   },
   "scripts": {
     "dev": "next dev",
