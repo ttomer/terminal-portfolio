@@ -49,6 +49,11 @@ export const portfolio = async (args: string[]): Promise<string> => {
   return 'Opening resume...';
 };
 
+export const readme = async (args: string[]): Promise<string> => {
+  window.open(`${config.portfolio}`);
+  return 'Opening readme...';
+};
+
 // // Donate
 // export const donate = async (args: string[]): Promise<string> => {
 //   return `thank you for your interest. 
@@ -154,19 +159,15 @@ export const sudo = async (args?: string[]): Promise<string> => {
 export const banner = (args?: string[]): string => {
   return `
 
-     _________
-    / ======= \\
-   / __________\\
-  | ___________ |
-  | | -       | |
-  | |         | |
-  | |_________| |________________________
-  \=____________/   Tomer Torgeman       )
-  / """"""""""" \\                       /
- / ::::::::::::: \\                  =D-'
-(_________________)
+████████╗ ██████╗ ███╗   ███╗███████╗██████╗ 
+╚══██╔══╝██╔═══██╗████╗ ████║██╔════╝██╔══██╗
+   ██║   ██║   ██║██╔████╔██║█████╗  ██████╔╝
+   ██║   ██║   ██║██║╚██╔╝██║██╔══╝  ██╔══██╗
+   ██║   ╚██████╔╝██║ ╚═╝ ██║███████╗██║  ██║
+   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
 
 Type 'help' to see the list of available commands.
+Type 'portfolio' - my portfolio.
 Type 'summary' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
 `;

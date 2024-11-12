@@ -1,15 +1,13 @@
 #!/bin/sh
-# This script installs LiveTerm.
-#
-# Found a bug? Report it here: https://github.com/Cveinnt/LiveTerm/issues
+# This script installs Terminal.
 
 set -e -u
 
 eval "git clone 'https://github.com/Cveinnt/LiveTerm.git'"
 
-cd LiveTerm
+cd root
 
-echo "LiveTerm cloned! Installing dependencies..."
+echo "root cloned! Installing dependencies..."
 
 if command -v yarn >/dev/null 2>&1 ; then
   yarn install
@@ -33,21 +31,9 @@ fi
 
 cat <<-'EOM'
 
-
- █████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
-                                                                                
-
-LiveTerm has been downloaded to the current directory.
 You can start developing it with:
 
-cd LiveTerm && yarn dev
+cd root && yarn dev
 
 This will open a local port at http://localhost:3000, 
 where you can preview your website. To apply changes, edit:
