@@ -5,13 +5,14 @@ import { Input } from '../components/input';
 import { useHistory } from '../components/history/hook';
 import { History } from '../components/history/History';
 import { banner } from '../utils/bin';
+import styles from '../styles/index.module.css';
 
 interface IndexPageProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
-  const containerRef = React.useRef(null);
+  const containerRef = React.useRef<HTMLDivElement | null>(null);
   const {
     history,
     command,
@@ -21,6 +22,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     clearHistory,
     setLastCommandIndex,
   } = useHistory([]);
+  const [showPortfolio, setShowPortfolio] = React.useState(false);
 
   const init = React.useCallback(() => setHistory(banner()), []);
 
@@ -57,6 +59,30 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
             clearHistory={clearHistory}
           />
         </div>
+<div>
+        {/* Button to trigger portfolio display */}
+        <button
+          className={styles.showPortfolioButton}
+          onClick={() => setShowPortfolio(true)}
+        >
+          View Portfolio
+        </button>
+
+        {/* Overlay with iframe */}
+        {showPortfolio && (
+          <div className={styles.overlay}>
+            <button
+              className={styles.closeButton}
+              onClick={() => setShowPortfolio(false)}
+            >
+              Close
+            </button>
+            <iframe
+              src="https://ttomer.github.io/portfolio_website/"
+              className={styles.iframe}
+            />
+          </div>
+        )}</div>
       </div>
     </>
   );
