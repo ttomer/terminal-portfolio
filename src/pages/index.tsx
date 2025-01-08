@@ -5,7 +5,7 @@ import { Input } from '../components/input';
 import { useHistory } from '../components/history/hook';
 import { History } from '../components/history/History';
 import { banner } from '../utils/bin';
-import styles from './index.module.css';
+import styles from '../styles/index.module.css';
 
 interface IndexPageProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
