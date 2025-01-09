@@ -44,10 +44,16 @@ export const resume = async (args: string[]): Promise<string> => {
   return 'Opening resume...';
 };
 
-export const portfolio = async (args: string[]): Promise<string> => {
-  window.open(`${config.portfolio}`);
-  return 'Opening resume...';
+// export const portfolio = async (args: string[]): Promise<string> => {
+//   window.open(`${config.portfolio}`);
+//   return 'Opening resume...';
+// };
+
+export const portfolio = async (args: string[], setOverlayUrl: Function): Promise<string> => {
+  setOverlayUrl(`${config.portfolio}`);
+  return 'Opening portfolio...';
 };
+
 
 export const readme = async (args: string[]): Promise<string> => {
   window.open(`${config.portfolio}`);
