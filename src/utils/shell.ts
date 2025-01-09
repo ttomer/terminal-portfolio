@@ -1,5 +1,8 @@
 import React from 'react';
 import * as bin from './bin';
+// import { config } from 'process';
+import config from '../../config.json';
+
 
 export const shell = async (
   command: string,
@@ -19,12 +22,11 @@ export const shell = async (
     setHistory(
       `shell: command not found: ${args[0]}. Try 'help' to get started.`,
     );
-  } else if (args[0] === 'portfolio' || args[0] === 'resume' || args[0] === 'github') {
+  } else if (args[0] === 'portfolio' || args[0] === 'resume') {
     // Handle commands that need to open in iframe
     const urls: Record<string, string> = {
-      portfolio: 'https://ttomer.github.io/portfolio_website/',
-      resume: 'https://example.com/resume.pdf', // Replace with your resume URL
-      github: 'https://github.com/yourusername', // Replace with your GitHub URL
+      portfolio: config.portfolio,
+      resume: config.resume_url, 
     };
     const url = urls[args[0]];
 

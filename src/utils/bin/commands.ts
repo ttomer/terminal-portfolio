@@ -39,8 +39,9 @@ More about me:
 'readme' - my github readme.`;
 };
 
-export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
+export const resume = async (args: string[], setOverlayUrl: Function): Promise<string> => {
+  // window.open(`${config.resume_url}`);
+  setOverlayUrl(`${config.resume_url}`);
   return 'Opening resume...';
 };
 
