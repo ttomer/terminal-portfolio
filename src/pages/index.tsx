@@ -65,7 +65,14 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
 />
 
         </div>
-
+      {/* Button to trigger portfolio display */}
+{/* Button to trigger portfolio display */}
+        <button
+          className={styles.showPortfolioButton}
+          onClick={() => setOverlayUrl(config.portfolio)}
+        >
+          View Portfolio
+        </button> 
         {/* Overlay for dynamic URLs */}
         {overlayUrl && (
           <div className={styles.overlay}>
