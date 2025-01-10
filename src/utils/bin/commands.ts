@@ -39,15 +39,22 @@ More about me:
 'readme' - my github readme.`;
 };
 
-export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
+export const resume = async (args: string[], setOverlayUrl: Function): Promise<string> => {
+  // window.open(`${config.resume_url}`);
+  setOverlayUrl(`${config.resume_url}`);
   return 'Opening resume...';
 };
 
-export const portfolio = async (args: string[]): Promise<string> => {
-  window.open(`${config.portfolio}`);
-  return 'Opening resume...';
+// export const portfolio = async (args: string[]): Promise<string> => {
+//   window.open(`${config.portfolio}`);
+//   return 'Opening resume...';
+// };
+
+export const portfolio = async (args: string[], setOverlayUrl: Function): Promise<string> => {
+  setOverlayUrl(`${config.portfolio}`);
+  return 'Opening portfolio...';
 };
+
 
 export const readme = async (args: string[]): Promise<string> => {
   window.open(`${config.portfolio}`);
@@ -168,6 +175,7 @@ export const banner = (args?: string[]): string => {
 
 Type 'help' to see the list of available commands.
 Type 'portfolio' - my portfolio.
+Type 'resume' - my latest resume.
 Type 'summary' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
 `;
