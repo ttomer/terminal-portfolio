@@ -7,8 +7,8 @@ const summary = async (args: string[]): Promise<string> => {
         @@@@               @@@@             -----------
       @@                       @@            ABOUT
     @@                           @@          ${config.name}
-  @@                               @@        <u><a href="${config.portfolio}" target="_blank">portfolio</a></u>
- @@                         @@@     @@       <u><a href="${config.resume_url}" target="_blank">resume</a></u>
+  @@                               @@       ﰩ ${config.ps1_hostname}
+ @@                         @@@     @@       <u><a href="${config.resume_drive}" target="_blank">resume</a></u>
 @@        @@@                        @@     爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
 @@                                   @@     -----------
 @@             .@@@@@@@@@@.          @@      CONTACT 
@@ -27,7 +27,7 @@ const summary = async (args: string[]): Promise<string> => {
         ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
       ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄             ABOUT
     ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ${config.name}
-   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓           <u><a href="${config.resume_url}" target="_blank">resume</a></u>
+   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓           <u><a href="${config.resume_drive}" target="_blank">resume</a></u>
 ▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓       爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
 ▐▓                                 ▐▓       -----------
 ▐▓        > T O M E R              ▐▓        CONTACT 

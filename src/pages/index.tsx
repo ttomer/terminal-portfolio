@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import React from 'react';
+import Head from 'next/head';
 import config from '../../config.json';
 import { Input } from '../components/input';
 import { useHistory } from '../components/history/hook';
@@ -22,7 +22,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     clearHistory,
     setLastCommandIndex,
   } = useHistory([]);
-  const [showPortfolio, setShowPortfolio] = React.useState(false);
+  const [overlayUrl, setOverlayUrl] = React.useState<string | null>(null);
 
   const init = React.useCallback(() => setHistory(banner()), []);
 
@@ -37,6 +37,10 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     }
   }, [history]);
 
+  const handleOpenOverlay = (url: string) => {
+    setOverlayUrl(url);
+  };
+
   return (
     <>
       <Head>
@@ -48,41 +52,39 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
           <History history={history} />
 
           <Input
-            inputRef={inputRef}
-            containerRef={containerRef}
-            command={command}
-            history={history}
-            lastCommandIndex={lastCommandIndex}
-            setCommand={setCommand}
-            setHistory={setHistory}
-            setLastCommandIndex={setLastCommandIndex}
-            clearHistory={clearHistory}
-          />
+  inputRef={inputRef}
+  containerRef={containerRef}
+  command={command}
+  history={history}
+  lastCommandIndex={lastCommandIndex}
+  setCommand={setCommand}
+  setHistory={setHistory}
+  setLastCommandIndex={setLastCommandIndex}
+  clearHistory={clearHistory}
+  setOverlayUrl={setOverlayUrl} // Pass the overlay setter
+/>
+
         </div>
-<div>
-        {/* Button to trigger portfolio display */}
+      {/* Button to trigger portfolio display */}
+{/* Button to trigger portfolio display */}
         <button
           className={styles.showPortfolioButton}
-          onClick={() => setShowPortfolio(true)}
+          onClick={() => setOverlayUrl(config.portfolio)}
         >
           View Portfolio
-        </button>
-
-        {/* Overlay with iframe */}
-        {showPortfolio && (
+        </button> 
+        {/* Overlay for dynamic URLs */}
+        {overlayUrl && (
           <div className={styles.overlay}>
             <button
               className={styles.closeButton}
-              onClick={() => setShowPortfolio(false)}
+              onClick={() => setOverlayUrl(null)}
             >
               Close
             </button>
-            <iframe
-              src="https://ttomer.github.io/portfolio_website/"
-              className={styles.iframe}
-            />
+            <iframe src={overlayUrl} className={styles.iframe} />
           </div>
-        )}</div>
+        )}
       </div>
     </>
   );
