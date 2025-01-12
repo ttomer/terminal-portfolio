@@ -11,7 +11,8 @@
   "ps1_hostname": "tomer-dev.xyz",
   "ps1_username": "potato",
   "repo": "https://github.com/ttomer",
-  "resume_url": "https://drive.google.com/file/d/1aWG2jTbiGOWkp_cKlD_2IA_RkThkY0kX/view?usp=sharing",
+  "resume_url": "https://drive.google.com/file/d/1aWG2jTbiGOWkp_cKlD_2IA_RkThkY0kX/preview",
+  "resume_drive": "https://drive.google.com/file/d/1aWG2jTbiGOWkp_cKlD_2IA_RkThkY0kX/view",
   "portfolio": "https://ttomer.github.io/portfolio_website/",
   "donate_urls": {
     "paypal": "",
